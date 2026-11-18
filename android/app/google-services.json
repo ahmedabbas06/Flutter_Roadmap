@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277802775664",
+    "project_id": "flutter-roadmap-21311",
+    "storage_bucket": "flutter-roadmap-21311.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277802775664:android:5618957a071be96b6930b5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_roadmap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDokl85wvknp6n074x5oyCJ-Ix0pJ894b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
