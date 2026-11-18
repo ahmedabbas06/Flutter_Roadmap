@@ -21,7 +21,21 @@ class AppInfoWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Icon(Icons.info_outline, color: theme.colorScheme.onSurfaceVariant, size: 28),
+          ClipOval(
+            child: Image.asset(
+              'assets/icon/app_icon.png',
+              width: 44,
+              height: 44,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) {
+                return Icon(
+                  Icons.info_outline,
+                  color: theme.colorScheme.onSurfaceVariant,
+                  size: 28,
+                );
+              },
+            ),
+          ),
           SizedBox(height: 8),
           Text(
             loc.translate('appName'),

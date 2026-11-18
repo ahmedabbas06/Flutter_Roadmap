@@ -12,16 +12,27 @@ class ForgotPasswordHeaderWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 72,
-          height: 72,
+          width: 76,
+          height: 76,
           decoration: BoxDecoration(
-            color: theme.primaryColor.withValues(alpha: 0.15),
+            color: theme.primaryColor.withValues(alpha: 0.12),
             shape: BoxShape.circle,
           ),
-          child: Icon(
-            Icons.lock_reset_outlined,
-            size: 38,
-            color: theme.primaryColor,
+          padding: EdgeInsets.all(10),
+          child: ClipOval(
+            child: Image.asset(
+              'assets/icon/app_icon.png',
+              width: 56,
+              height: 56,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) {
+                return Icon(
+                  Icons.lock_reset_outlined,
+                  size: 36,
+                  color: theme.primaryColor,
+                );
+              },
+            ),
           ),
         ),
         SizedBox(height: 16),

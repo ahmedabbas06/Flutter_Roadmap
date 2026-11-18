@@ -12,27 +12,23 @@ class StatusBadgeWidget extends StatelessWidget {
     AppLocalizations loc = AppLocalizations.of(context)!;
 
     Color badgeColor;
-    String displayStatus;
+    String displayStatus = loc.translateStatus(status);
 
     switch (status) {
       case 'Completed':
       case 'Published':
         badgeColor = AppColors.success;
-        displayStatus = status == 'Completed' ? loc.translate('statusCompleted') : loc.translate('statusPublished');
         break;
       case 'In Progress':
       case 'In Preparation':
         badgeColor = AppColors.warning;
-        displayStatus = status == 'In Progress' ? loc.translate('statusInProgress') : loc.translate('statusInPreparation');
         break;
       case 'Ready':
         badgeColor = AppColors.sageGreen;
-        displayStatus = loc.translate('statusReady');
         break;
       case 'Not Started':
       default:
         badgeColor = AppColors.coffeeBrown;
-        displayStatus = loc.translate('statusNotStarted');
         break;
     }
 

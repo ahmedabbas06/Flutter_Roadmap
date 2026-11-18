@@ -45,7 +45,7 @@ class WeeklyTestWidget extends StatelessWidget {
             value: week.isTestCompleted,
             activeColor: theme.primaryColor,
             title: Text(
-              'I have written all checklist items, projects, and Dart OOP examples by hand.',
+              loc.translate('testConfirmation'),
               style: TextStyle(fontSize: 13),
             ),
             onChanged: (bool? val) {

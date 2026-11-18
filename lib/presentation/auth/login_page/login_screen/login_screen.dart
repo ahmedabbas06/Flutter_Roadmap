@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../auth_controller/auth_controller.dart';
 import '../login_controller/login_controller.dart';
-import '../../auth_controller.dart';
 import 'widgets/login_header_widget.dart';
 import 'widgets/login_form_widget.dart';
 import 'widgets/login_footer_widget.dart';

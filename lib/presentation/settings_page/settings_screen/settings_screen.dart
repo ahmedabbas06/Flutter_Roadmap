@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../auth/auth_controller/auth_controller.dart';
 import '../settings_controller/settings_controller.dart';
 import '../../roadmap_data_controller.dart';
-import '../../auth/auth_controller.dart';
 import '../../../../core/localization/language_controller.dart';
 import '../../../../core/theme/theme_controller.dart';
 import '../../../../core/localization/app_localizations.dart';

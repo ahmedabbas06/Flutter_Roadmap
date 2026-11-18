@@ -80,7 +80,7 @@ class WeeklyPostsWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Status: ',
+                        loc.translate('statusLabel'),
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
@@ -93,7 +93,10 @@ class WeeklyPostsWidget extends StatelessWidget {
                         items: ['Not Started', 'In Preparation', 'Ready', 'Published']
                             .map((s) => DropdownMenuItem(
                                   value: s,
-                                  child: Text(s, style: TextStyle(fontSize: 12)),
+                                  child: Text(
+                                    loc.translateStatus(s),
+                                    style: TextStyle(fontSize: 12),
+                                  ),
                                 ))
                             .toList(),
                         onChanged: (val) {

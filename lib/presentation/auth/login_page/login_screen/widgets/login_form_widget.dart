@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/common_widgets/custom_text_field_widget.dart';
 import '../../../../../core/common_widgets/custom_button_widget.dart';
 import '../../../../../core/localization/app_localizations.dart';
+import '../../../auth_controller/auth_controller.dart';
 import '../../login_controller/login_controller.dart';
-import '../../../auth_controller.dart';
 
 class LoginFormWidget extends StatelessWidget {
   final LoginController controller;

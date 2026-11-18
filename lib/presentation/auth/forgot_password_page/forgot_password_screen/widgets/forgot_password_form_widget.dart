@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/common_widgets/custom_text_field_widget.dart';
 import '../../../../../core/common_widgets/custom_button_widget.dart';
 import '../../../../../core/localization/app_localizations.dart';
+import '../../../auth_controller/auth_controller.dart';
 import '../../forgot_password_controller/forgot_password_controller.dart';
-import '../../../auth_controller.dart';
 
 class ForgotPasswordFormWidget extends StatelessWidget {
   final ForgotPasswordController controller;

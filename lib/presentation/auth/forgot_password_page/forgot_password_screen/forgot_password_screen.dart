@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../auth_controller/auth_controller.dart';
 import '../forgot_password_controller/forgot_password_controller.dart';
-import '../../auth_controller.dart';
 import 'widgets/forgot_password_header_widget.dart';
 import 'widgets/forgot_password_form_widget.dart';
 

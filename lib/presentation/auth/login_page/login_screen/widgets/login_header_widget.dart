@@ -12,16 +12,27 @@ class LoginHeaderWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 80,
-          height: 80,
+          width: 84,
+          height: 84,
           decoration: BoxDecoration(
-            color: theme.primaryColor.withValues(alpha: 0.15),
+            color: theme.primaryColor.withValues(alpha: 0.12),
             shape: BoxShape.circle,
           ),
-          child: Icon(
-            Icons.flutter_dash,
-            size: 48,
-            color: theme.primaryColor,
+          padding: EdgeInsets.all(10),
+          child: ClipOval(
+            child: Image.asset(
+              'assets/icon/app_icon.png',
+              width: 64,
+              height: 64,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) {
+                return Icon(
+                  Icons.flutter_dash,
+                  size: 44,
+                  color: theme.primaryColor,
+                );
+              },
+            ),
           ),
         ),
         SizedBox(height: 20),

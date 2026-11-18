@@ -58,8 +58,8 @@ class WeeklyReviewWidget extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: SizedBox(
-            width: 140,
-            height: 40,
+            width: 160,
+            height: 42,
             child: CustomButtonWidget(
               text: loc.translate('saveNotes'),
               onPressed: () {

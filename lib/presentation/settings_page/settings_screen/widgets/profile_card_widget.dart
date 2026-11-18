@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/localization/app_localizations.dart';
-import '../../../auth/auth_controller.dart';
+import '../../../auth/auth_controller/auth_controller.dart';
 
 class ProfileCardWidget extends StatelessWidget {
   final AuthController authController;

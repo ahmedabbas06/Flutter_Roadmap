@@ -14,16 +14,27 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 90,
-              height: 90,
+              width: 100,
+              height: 100,
               decoration: BoxDecoration(
-                color: theme.primaryColor.withValues(alpha: 0.15),
+                color: theme.primaryColor.withValues(alpha: 0.12),
                 shape: BoxShape.circle,
               ),
-              child: Icon(
-                Icons.flutter_dash,
-                size: 54,
-                color: theme.primaryColor,
+              padding: EdgeInsets.all(12),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/icon/app_icon.png',
+                  width: 80,
+                  height: 80,
+                  fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Icon(
+                      Icons.flutter_dash,
+                      size: 54,
+                      color: theme.primaryColor,
+                    );
+                  },
+                ),
               ),
             ),
             SizedBox(height: 24),

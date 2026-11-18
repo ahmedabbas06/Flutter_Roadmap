@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../auth_controller/auth_controller.dart';
 import '../signup_controller/signup_controller.dart';
-import '../../auth_controller.dart';
 import 'widgets/signup_header_widget.dart';
 import 'widgets/signup_form_widget.dart';
 import 'widgets/signup_footer_widget.dart';

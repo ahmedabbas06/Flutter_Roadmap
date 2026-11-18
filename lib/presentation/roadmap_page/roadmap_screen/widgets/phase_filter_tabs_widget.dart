@@ -18,11 +18,11 @@ class PhaseFilterTabsWidget extends StatelessWidget {
 
     List<Map<String, dynamic>> phases = [
       {'id': 0, 'label': loc.translate('allPhases')},
-      {'id': 1, 'label': 'Phase 1: Core'},
-      {'id': 2, 'label': 'Phase 2: Advanced'},
-      {'id': 3, 'label': 'Phase 3: Professional'},
-      {'id': 4, 'label': 'Phase 4: Production'},
-      {'id': 5, 'label': 'Phase 5: Extras'},
+      {'id': 1, 'label': loc.translate('phase1')},
+      {'id': 2, 'label': loc.translate('phase2')},
+      {'id': 3, 'label': loc.translate('phase3')},
+      {'id': 4, 'label': loc.translate('phase4')},
+      {'id': 5, 'label': loc.translate('phase5')},
     ];
 
     return SizedBox(

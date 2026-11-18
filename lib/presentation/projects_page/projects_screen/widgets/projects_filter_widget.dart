@@ -20,6 +20,11 @@ class ProjectsFilterWidget extends StatelessWidget {
 
     List<String> filters = ['All', 'In Progress', 'Completed', 'Not Started'];
 
+    String getFilterLabel(String f) {
+      if (f == 'All') return loc.translate('allFilters');
+      return loc.translateStatus(f);
+    }
+
     return Column(
       children: [
         TextField(
@@ -44,7 +49,7 @@ class ProjectsFilterWidget extends StatelessWidget {
                 padding: EdgeInsets.only(right: 8),
                 child: ChoiceChip(
                   label: Text(
-                    f,
+                    getFilterLabel(f),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,

@@ -44,12 +44,14 @@ class AppLocalizations {
       'xpPoints': 'XP Points',
       'dayStreak': 'Day Streak',
       'allPhases': 'All Phases',
+      'allFilters': 'All',
       'phase1': 'Phase 1: Core (Weeks 1-6)',
       'phase2': 'Phase 2: Advanced (Weeks 7-10)',
       'phase3': 'Phase 3: Professional (Weeks 11-14)',
       'phase4': 'Phase 4: Production (Weeks 15-18)',
       'phase5': 'Phase 5: Advanced Extras (Weeks 19-24)',
       'laterTopics': 'Later / Advanced Topics',
+      'laterTopicsSubtitle': 'Weeks 19–24: Advanced topics after Capstone release.',
       'week': 'Week',
       'statusNotStarted': 'Not Started',
       'statusInProgress': 'In Progress',
@@ -74,9 +76,11 @@ class AppLocalizations {
       'savePostUrl': 'Save Link',
       'githubRepoUrl': 'GitHub Repository URL',
       'personalNotes': 'Personal Notes',
+      'personalNotesHint': 'Notes, key takeaways, architectural decisions...',
       'saveNotes': 'Save Notes',
       'weeklyReview': 'Weekly Review',
       'weeklyTest': 'Weekly Completion Test',
+      'testConfirmation': 'I have written all checklist items, projects, and Dart OOP examples by hand.',
       'markWeekCompleted': 'Mark Week as Completed',
       'weekCompletedMessage': 'Congratulations! Week completed!',
       'cannotCompleteWeekMessage': 'Complete all checklist items, projects, and review to finish this week.',
@@ -107,8 +111,11 @@ class AppLocalizations {
       'notesSaved': 'Notes saved successfully',
       'postSaved': 'Post updated successfully',
       'projectSaved': 'Project updated successfully',
+      'progressResetSuccess': 'Progress reset successfully',
       'version': 'Version 1.0.0',
       'developerNote': 'Built with Flutter & Firebase',
+      'welcomeUser': 'Welcome, {name}!',
+      'statusLabel': 'Status: ',
     },
     'ar': {
       'appName': 'خطة تعلم فلاتر',
@@ -144,12 +151,14 @@ class AppLocalizations {
       'xpPoints': 'نقاط XP',
       'dayStreak': 'أيام التتابع',
       'allPhases': 'جميع المراحل',
+      'allFilters': 'الكل',
       'phase1': 'المرحلة 1: الأساسيات (الأسابيع 1-6)',
       'phase2': 'المرحلة 2: المستوى المتقدم (الأسابيع 7-10)',
       'phase3': 'المرحلة 3: المستوى الاحترافي (الأسابيع 11-14)',
       'phase4': 'المرحلة 4: الإنتاج والنشر (الأسابيع 15-18)',
       'phase5': 'المرحلة 5: مواضيع إضافية متقدمة (الأسابيع 19-24)',
       'laterTopics': 'مواضيع متقدمة لاحقة',
+      'laterTopicsSubtitle': 'الأسابيع 19–24: مواضيع متقدمة بعد إطلاق مشروع التخرج.',
       'week': 'الأسبوع',
       'statusNotStarted': 'لم يبدأ',
       'statusInProgress': 'قيد التقدم',
@@ -172,11 +181,13 @@ class AppLocalizations {
       'principlePost': 'منشور شرح المبدأ الأساسي',
       'postUrl': 'رابط المنشور',
       'savePostUrl': 'حفظ الرابط',
-      'githubRepoUrl': 'رابط المستودع علي جيت هاب',
+      'githubRepoUrl': 'رابط المستودع على جيت هاب',
       'personalNotes': 'ملاحظات شخصية',
+      'personalNotesHint': 'ملاحظات، النقاط الرئيسية، القرارات المعمارية...',
       'saveNotes': 'حفظ الملاحظات',
       'weeklyReview': 'المراجعة الأسبوعية',
       'weeklyTest': 'اختبار نهاية الأسبوع',
+      'testConfirmation': 'لقد كتبت جميع عناصر القائمة، والمشاريع، وأمثلة Dart OOP بيدي.',
       'markWeekCompleted': 'تحديد الأسبوع كمكتمل',
       'weekCompletedMessage': 'تهانينا! تم إكمال الأسبوع بنجاح!',
       'cannotCompleteWeekMessage': 'أكمل جميع نقاط قائمة المهام والمشاريع والمراجعة لإكمال هذا الأسبوع.',
@@ -207,13 +218,40 @@ class AppLocalizations {
       'notesSaved': 'تم حفظ الملاحظات بنجاح',
       'postSaved': 'تم تحديث المنشور بنجاح',
       'projectSaved': 'تم تحديث المشروع بنجاح',
+      'progressResetSuccess': 'تمت إعادة ضبط التقدم بنجاح',
       'version': 'الإصدار 1.0.0',
       'developerNote': 'تم التطوير باستخدام فلاتر و فيربيز',
+      'welcomeUser': 'أهلاً بك، {name}!',
+      'statusLabel': 'الحالة: ',
     },
   };
 
   String translate(String key) {
     return localizedValues[locale.languageCode]?[key] ?? localizedValues['en']?[key] ?? key;
+  }
+
+  String translateWithParam(String key, String paramName, String paramValue) {
+    String text = translate(key);
+    return text.replaceAll('{$paramName}', paramValue);
+  }
+
+  String translateStatus(String status) {
+    switch (status) {
+      case 'Completed':
+        return translate('statusCompleted');
+      case 'In Progress':
+        return translate('statusInProgress');
+      case 'Not Started':
+        return translate('statusNotStarted');
+      case 'In Preparation':
+        return translate('statusInPreparation');
+      case 'Ready':
+        return translate('statusReady');
+      case 'Published':
+        return translate('statusPublished');
+      default:
+        return status;
+    }
   }
 }
 

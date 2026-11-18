@@ -84,7 +84,7 @@ class ProjectDetailsDialogWidgetState extends State<ProjectDetailsDialogWidget> 
             ),
             SizedBox(height: 16),
             Text(
-              'Status:',
+              loc.translate('statusLabel'),
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 4),
@@ -94,7 +94,10 @@ class ProjectDetailsDialogWidgetState extends State<ProjectDetailsDialogWidget> 
               items: ['Not Started', 'In Progress', 'Completed']
                   .map((s) => DropdownMenuItem(
                         value: s,
-                        child: Text(s, style: TextStyle(fontSize: 13)),
+                        child: Text(
+                          loc.translateStatus(s),
+                          style: TextStyle(fontSize: 13),
+                        ),
                       ))
                   .toList(),
               onChanged: (val) {
@@ -131,7 +134,7 @@ class ProjectDetailsDialogWidgetState extends State<ProjectDetailsDialogWidget> 
               maxLines: 3,
               style: TextStyle(fontSize: 13),
               decoration: InputDecoration(
-                hintText: 'Notes, key takeaways, architectural decisions...',
+                hintText: loc.translate('personalNotesHint'),
               ),
             ),
             SizedBox(height: 20),

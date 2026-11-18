@@ -38,7 +38,7 @@ class LaterTopicsSectionWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 2),
                 Text(
-                  'Weeks 19–24: Advanced topics after Capstone release.',
+                  loc.translate('laterTopicsSubtitle'),
                   style: TextStyle(
                     fontSize: 12,
                     color: theme.colorScheme.onSurfaceVariant,

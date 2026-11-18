@@ -1,11 +1,11 @@
 {
-    "name": "flutter_roadmap",
-    "short_name": "flutter_roadmap",
+    "name": "Flutter Roadmap",
+    "short_name": "Flutter Roadmap",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#F7F6F2",
+    "theme_color": "#7A9772",
+    "description": "Your Personal Flutter Learning Journey",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

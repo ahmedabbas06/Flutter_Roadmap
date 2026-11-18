@@ -86,12 +86,10 @@ class WeeklyProjectsWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 12),
-
-                  // Project Status dropdown
                   Row(
                     children: [
                       Text(
-                        'Status: ',
+                        loc.translate('statusLabel'),
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -104,7 +102,10 @@ class WeeklyProjectsWidget extends StatelessWidget {
                         items: ['Not Started', 'In Progress', 'Completed']
                             .map((s) => DropdownMenuItem(
                                   value: s,
-                                  child: Text(s, style: TextStyle(fontSize: 13)),
+                                  child: Text(
+                                    loc.translateStatus(s),
+                                    style: TextStyle(fontSize: 13),
+                                  ),
                                 ))
                             .toList(),
                         onChanged: (val) {
@@ -116,11 +117,9 @@ class WeeklyProjectsWidget extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 12),
-
-                  // Project Checklist
                   if (proj.checklistEn.isNotEmpty) ...[
                     Text(
-                      'Checklist:',
+                      loc.translate('weeklyChecklist'),
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
@@ -159,8 +158,6 @@ class WeeklyProjectsWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                   ],
-
-                  // GitHub Repo URL field
                   TextField(
                     controller: repoCtrl,
                     style: TextStyle(fontSize: 13),
